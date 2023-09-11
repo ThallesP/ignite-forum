@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/node",
+    "plugin:vitest-globals/recommended"
+  ],
+  "plugins": [
+    "check-file"
+  ],
+  "rules": {
+    "no-useless-constructor": "off",
+    "check-file/folder-naming-convention": [
+      "error",
+      {
+        "src/**/*": "KEBAB_CASE"
+      }
+    ],
+    "check-file/filename-naming-convention": [
+      "error",
+      {
+        "**/*.ts": "KEBAB_CASE"
+      },
+      {
+        "ignoreMiddleExtensions": true
+      }
+    ]
+  },
+  "env": {
+    "vitest-globals/env": true
+  }
+}
