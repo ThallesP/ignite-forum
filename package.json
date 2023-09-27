@@ -6,17 +6,20 @@
   "scripts": {
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
-    "test": "bun test",
-    "test:watch": "bun test --watch"
+    "test": "vitest run",
+    "test:watch": "vitest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@types/jest": "^29.5.4",
     "eslint": "^8.48.0",
     "eslint-plugin-check-file": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.5"
   },
   "dependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
