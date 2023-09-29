@@ -5,6 +5,12 @@ import { Question } from "@/domain/forum/enterprise/entities/question";
 export class InMemoryQuestionsRepository implements QuestionsRepository {
   public questions: Question[] = [];
 
+  async save(question: Question): Promise<void> {
+    const index = this.questions.findIndex((q) => q.id.equals(question.id));
+
+    this.questions[index] = question;
+  }
+
   async findById(id: UniqueEntityID): Promise<Question | null> {
     return this.questions.find((question) => question.id.equals(id)) ?? null;
   }
