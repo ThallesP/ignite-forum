@@ -23,7 +23,7 @@ export class Question extends Entity<QuestionProps> {
       {
         ...props,
         slug: props.slug ?? Slug.createFromText(props.title),
-        createdAt: new Date(),
+        createdAt: props.createdAt ?? new Date(),
       },
       id
     );
@@ -37,7 +37,7 @@ export class Question extends Entity<QuestionProps> {
     return this.props.bestAnswerId;
   }
 
-  set bestAnswerId(id: UniqueEntityID) {
+  set bestAnswerId(id: UniqueEntityID | undefined) {
     this.props.bestAnswerId = id;
     this.touch();
   }
