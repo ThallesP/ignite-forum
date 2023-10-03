@@ -7,7 +7,7 @@ import { Slug } from "@/domain/forum/enterprise/entities/value-objects/slug";
 import { faker } from "@faker-js/faker";
 
 export function makeQuestion(
-  override: Partial<QuestionProps>,
+  override?: Partial<QuestionProps>,
   id?: UniqueEntityID
 ) {
   const title = faker.lorem.sentence();
