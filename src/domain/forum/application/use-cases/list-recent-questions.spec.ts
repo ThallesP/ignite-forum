@@ -1,6 +1,4 @@
 import { InMemoryQuestionsRepository } from "tests/repositories/in-memory-questions-repository";
-import { GetQuestionBySlugUseCase } from "./get-question-by-slug";
-import { Slug } from "../../enterprise/entities/value-objects/slug";
 import { makeQuestion } from "tests/factories/make-question";
 import { ListRecentQuestionsUseCase } from "./list-recent-questions";
 
